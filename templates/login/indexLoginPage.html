@@ -1,0 +1,60 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../static/css/styleLoginPage.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">
+            <div class="logo">Belganarios</div>
+            <div class="title">Ei, bem-vindo de volta!</div>
+            <div class="subtitle">Sua área exclusiva, protegida e personalizada.</div>
+
+            <ul class="flash-messages">
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                        {% for category, message in messages %}
+                            <li class="{{ category }}">{{ message }}</li>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+            </ul>
+
+            <div class="form">
+                <form action="{{ url_for('login') }}" method="POST">
+                    <input type="email" placeholder="Email" name="email" required />
+                    <input type="password" placeholder="Senha" name="senha" required />
+
+                    <div class="form-options-inline">
+                        <div class="left-side">
+                            <span>Lembrar de Mim</span>
+                            <button class="checkbox-button" id="rememberButton" aria-label="Lembrar de Mim"></button>
+                            <input type="hidden" id="rememberMeHidden" name="remember_me" value="false">
+                            </div>
+
+                        <a class="forgot" href="indexEncontrarSenha.html">Esqueci minha senha</a> 
+                        </div>
+
+                    <button type="submit" class="btn">Login</button>
+                </form>
+                </div>
+
+            <div class="signup">
+                Não tem uma conta? 
+                <a href="{{ url_for('registrar') }}">Cadastrar-se</a>
+            </div>
+        </div>
+        <div class="right">
+            <div class="image-section">
+                </div>
+        </div>
+    </div>
+    <script src="../static/script/scriptLogin.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contribua com o Belganários</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/css/styleHomes/styleHomeFooter.css">
+    <link rel="stylesheet" href="../../static/css/styleFooterPages/styleContribua.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="voltar-container">
+        <a href="/templates/home/indexHomePage.html" class="voltar-btn">← Voltar para o início</a>
+    </div>
+
+    <div class="container">
+        <h1>Contribua com o Belganários 💛</h1>
+        <p>Sua ajuda é essencial para manter nosso site funcionando e apoiar a comunidade de criadores!</p>
+
+        <div class="pix-img" style="background-image: url('../../static/images/QRCODE.png');"></div>
+
+        <div class="chave" id="chavePix">00020126330014BR.GOV.BCB.PIX0111493898618375204000053039865802BR5916KAUA SILVA
+            ALVES6009SAO PAULO622605226hJvj6RE78okDbt7LjD4VN6304EC8B</div>
+        <a href="#" class="botao" onclick="copiarChavePix()">Copiar chave PIX</a>
+
+        <div class="valor-sugerido">
+            <strong>(Você pode doar qualquer valor)</strong>
+        </div>
+    </div>
+
+    <footer class="belg-footer">
+        <div class="footer-wrapper">
+            <div class="footer-left">
+                <p>&copy; 2025 BELGANÁRIOS.com</p>
+            </div>
+            <div class="footer-center">
+                <a href="../footer/regras.html">REGRAS</a>
+                <a href="#">FÓRUM</a>
+                <a href="../footer/contribua.html">CONTRIBUA</a>
+            </div>
+            <div class="footer-right">
+                <img src="../../static/images/obrigado.jpg" alt="Contador de visitantes" />
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function copiarChavePix() {
+            const chave = document.getElementById("chavePix").innerText;
+            navigator.clipboard.writeText(chave).then(() => {
+                alert("Chave PIX copiada com sucesso!");
+            });
+        }
+    </script>
+
+</body>
+
+</html>

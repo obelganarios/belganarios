@@ -1,0 +1,74 @@
+.belg-footer {
+    background-color: #ffffff;
+    border-top: 1px solid #ddd;
+    padding: 20px 30px;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 0.95em;
+    color: #666;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1300px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.footer-left p {
+    margin: 0;
+    font-size: 0.95em;
+}
+
+.footer-center {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.footer-center a {
+    color: #444;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.footer-center a:hover {
+    color: #2c6e49;
+}
+
+.footer-right img {
+    height: 40px;
+}
+
+.footer-right a {
+    color: #444;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.footer-right a:hover {
+    color: #2c6e49;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .footer-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-center {
+        justify-content: center;
+        margin: 10px 0;
+    }
+
+    .footer-right img {
+        margin-top: 10px;
+    }
+}

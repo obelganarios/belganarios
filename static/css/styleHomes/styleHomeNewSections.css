@@ -1,0 +1,271 @@
+/* ESTILO GERAL PARA FÓRUM, HISTÓRIA E FOTOS */
+
+.belg-title {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2f4f2f;
+    font-weight: 700;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+.belg-forum,
+.belg-fotos {
+    padding: 60px 30px;
+    background: linear-gradient(to bottom, #dcf0ef, #c9f9d7, #f9f4c9);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ===========================
+   HISTÓRIA (novo estilo)
+=========================== */
+
+.belg-historia {
+    background: #ffffff;
+    padding: 80px 30px;
+    border-radius: 0px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.belg-historia-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.belg-historia-intro {
+    flex: 1;
+    min-width: 280px;
+}
+
+.belg-historia-intro h5 {
+    font-size: 0.9em;
+    color: #777;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.belg-historia-intro h2 {
+    font-size: 2em;
+    font-weight: 700;
+    color: #111;
+    line-height: 1.3;
+}
+
+.belg-historia-text {
+    flex: 1;
+    min-width: 300px;
+    font-size: 1.05em;
+    color: #444;
+    line-height: 1.8;
+}
+
+.belg-historia-text a {
+    color: #3366cc;
+    text-decoration: none;
+}
+
+.belg-historia-text a:hover {
+    text-decoration: underline;
+}
+
+/* ===========================
+   FOTOS
+=========================== */
+.belg-fotos {
+    display: flex;
+    flex-direction: column;
+    padding: 60px 30px;
+    background: linear-gradient(to bottom, #dcf0ef, #c9f9d7, #f9f4c9);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.belg-title {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2f4f2f;
+    font-weight: 700;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+.belg-fotos-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.belg-foto-card {
+    background-color: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    animation: fadeInCard 0.6s ease forwards;
+    transform: translateY(20px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.belg-foto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+.belg-foto-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    background-color: #eee;
+    /* skeleton */
+    transition: opacity 0.8s ease;
+    opacity: 0;
+}
+
+.belg-foto-card img.loaded {
+    opacity: 1;
+}
+
+.foto-info {
+    padding: 15px 20px;
+    font-family: 'Montserrat', sans-serif;
+    color: #2f4f2f;
+}
+
+.foto-info h3 {
+    margin: 0 0 8px 0;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.foto-info p {
+    margin: 3px 0;
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* Animação fade */
+@keyframes fadeInCard {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Spinner de carregamento */
+.loading-spinner {
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #2f4f2f;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin: 30px auto;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsivo */
+@media (max-width: 1024px) {
+    .belg-fotos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 700px;
+    }
+}
+
+@media (max-width: 600px) {
+    .belg-fotos-grid {
+        grid-template-columns: 1fr;
+        max-width: 320px;
+    }
+}
+
+/* ===========================
+   RESPONSIVIDADE
+=========================== */
+
+@media (max-width: 768px) {
+    .belg-historia-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .belg-historia-intro h2 {
+        font-size: 1.5em;
+    }
+
+    .belg-historia-text {
+        font-size: 1em;
+    }
+}
+
+/* ===========================
+   BOTÃO "CARREGAR MAIS"
+=========================== */
+#carregar-mais-btn {
+    display: inline-block;
+    background-color: #2f4f2f;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 600;
+    padding: 14px 28px;
+    margin: 40px auto 0;
+    align-items: center;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#carregar-mais-btn:hover {
+    background-color: #3d6b3d;
+    transform: scale(1.03);
+}
+
+#carregar-mais-btn:active {
+    transform: scale(0.97);
+    background-color: #274427;
+}
+
+/* ===========================
+   SPINNER "CARREGANDO..."
+=========================== */
+#loading-spinner {
+    display: none;
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #2f4f2f;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin: 40px auto;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Fórum</title>
+</head>
+<body>
+    <h1>Fórum</h1>
+    <form action="{{ url_for('forum') }}" method="POST" enctype="multipart/form-data">
+        <textarea name="conteudo" placeholder="Escreva sua postagem aqui..." required></textarea>
+        <input type="file" name="anexo">
+        <button type="submit">Postar</button>
+    </form>
+
+    <h2>Postagens</h2>
+    {% for post in posts %}
+        <div>
+            <p><strong>{{ post.email }}</strong> - {{ post.data_postagem }}</p>
+            <p>{{ post.conteudo }}</p>
+            {% if post.anexo %}
+                <img src="{{ url_for('static', filename='uploads/' + post.anexo) }}" alt="Anexo" style="max-width: 300px;">
+            {% endif %}
+        </div>
+    {% endfor %}
+</body>
+</html>

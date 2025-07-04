@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/css/styleHomes/styleHomePage.css">
+    <link rel="stylesheet" href="../../static/css/styleHomes/styleHomeNavBar.css">
+    <link rel="stylesheet" href="../../static/css/styleHomes/styleHomeNewSections.css">
+    <link rel="stylesheet" href="../../static/css/styleHomes/styleHomeFooter.css">
+    <title>Belganários</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <section class="section1">
+        <img src="../../static/images/BELGANARIOS.png" alt="" id="imagem-fundo">
+        <nav>
+            <img src="" alt="">
+            <a href="../forum/indexForum.html" id="navA">Fórum</a>
+            <a href="../historia/indexHistoria.html" id="navA">História</a>
+            <a href="#" id="navA">Fotos</a>
+            <a href="{{ url_for('login_page') }}" class="loginButton" id="navA">Login</a>
+        </nav>
+
+        <div class="container">
+            <div class="content">
+                <h1>BELGANARIOS</h1><br><br>
+                <p id="textApre">A admiração pelos canários nos motiva a explorar e compartilhar sua beleza. Nossa
+                    jornada nos levou a
+                    descobrir histórias fascinantes sobre essas aves, revelando sua elegância, canto e encanto para
+                    todos os
+                    apaixonados.</p>
+                <a href="#" class="button" id="navA">Saiba mais</a><!-- LEMBRETE!! Vai pro História essa merda aqui-->
+            </div>
+        </div>
+    </section>
+
+    <!-- História -->
+    <section class="belg-historia">
+        <div class="belg-historia-container">
+            <div class="belg-historia-intro">
+                <h5>BEM-VINDO À NOSSA COMUNIDADE</h5>
+                <h2>Bem-vindo à maior comunidade de criadores de canários do Brasil</h2>
+            </div>
+            <div class="belg-historia-text">
+                <p>O Belganários é um portal interativo voltado à comunidade brasileira de criadores de canários, com o
+                    objetivo de valorizar, divulgar e apoiar essa prática tradicional.</p>
+                <p>Com conteúdo confiável e ferramentas modernas, ajudamos criadores iniciantes e experientes a se
+                    conectarem, compartilharem e aprenderem mais sobre o universo da canaricultura.</p>
+                <p>Navegue, participe e <a href="#">descubra como funciona o Belganários</a>.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Fotos -->
+    <section class="belg-fotos">
+        <h2 class="belg-title">Galeria de Fotos</h2>
+        <div class="belg-fotos-grid" id="belg-fotos-grid">
+        </div>
+        <button id="carregar-mais-btn">Carregar mais</button>
+        <div id="loading-spinner" style="display: none;"></div>
+        <div id="belg-fotos-grid"></div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="belg-footer">
+        <div class="footer-wrapper">
+            <div class="footer-left">
+                <p>&copy; 2025 BELGANÁRIOS.com</p>
+            </div>
+            <div class="footer-center">
+                <a href="../footer/regras.html">REGRAS</a>
+                <a href="">FÓRUM</a>
+                <a href="../footer/contribua.html">CONTRIBUA</a>
+            </div>
+            <div class="footer-right">
+                <img src="../../static/images/obrigado.jpg" />
+            </div>
+        </div>
+    </footer>
+</body>
+
+
+<script src="../../static/script/scriptNavBar.js"></script>
+<script src="../../static/script/scriptNewSections.js"></script>
+<script src="../../static/script/scriptLoadFotos.js"></script>
+
+</html>
